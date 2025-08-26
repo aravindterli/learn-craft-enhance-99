@@ -3,6 +3,7 @@ import { Search, Play, CheckCircle, Star, Users, TrendingUp, Sparkles, Zap, Targ
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import heroImage from "@/assets/hero-learning.jpg";
+import optgradLogo from "@/assets/optgrad-logo.png";
 import SearchModal from "./SearchModal";
 
 interface EnhancedHeroSectionProps {
@@ -93,6 +94,15 @@ const EnhancedHeroSection: React.FC<EnhancedHeroSectionProps> = ({ onSearch, onG
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
+          {/* OptGrad Logo */}
+          <div className="flex justify-center mb-12 animate-fade-in">
+            <img 
+              src={optgradLogo} 
+              alt="OptGrad by Techoptima" 
+              className="h-16 md:h-20 w-auto hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+          
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left Content */}
             <div className="space-y-8 animate-fade-up">

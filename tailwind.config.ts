@@ -199,7 +199,7 @@ export default {
 				'slide-in-right': 'slide-in-right 0.4s ease-out',
 				'float': 'float 6s ease-in-out infinite',
 				'float-reverse': 'float-reverse 8s ease-in-out infinite',
-				'shimmer': 'shimmer 2s infinite linear',
+				'shimmer': 'shimmer 13.33s infinite linear',
 				'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
 				'bounce-gentle': 'bounce-gentle 2s ease-in-out infinite',
 				'rotate-slow': 'rotate-slow 20s linear infinite',
