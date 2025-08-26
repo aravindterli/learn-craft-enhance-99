@@ -98,9 +98,10 @@ const EnhancedHeroSection: React.FC<EnhancedHeroSectionProps> = ({ onSearch, onG
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left Content */}
             <div className="space-y-8 animate-fade-up">
-              {/* OptGrad Logo above badge */}
-              <div className="flex justify-start -ml-4 mb-4 animate-fade-in">
-                <div className="flex items-center text-white text-3xl font-bold hover:scale-105 transition-transform duration-300">
+              {/* Top row with logo and signup button */}
+              <div className="flex justify-between items-center mb-4">
+                {/* OptGrad Logo on left */}
+                <div className="flex items-center text-white text-3xl font-bold hover:scale-105 transition-transform duration-300 animate-fade-in">
                   <img 
                     src={optgradLogo} 
                     alt="OptGrad by Techoptima" 
@@ -108,6 +109,14 @@ const EnhancedHeroSection: React.FC<EnhancedHeroSectionProps> = ({ onSearch, onG
                   />
                   OptGrad
                 </div>
+                
+                {/* Signup Button on right */}
+                <Button 
+                  className="bg-black text-white hover:bg-black/90 px-6 py-2 rounded-full font-medium transition-all duration-300 hover:scale-105 animate-fade-in"
+                  style={{ animationDelay: '0.2s' }}
+                >
+                  Sign Up
+                </Button>
               </div>
               
               {/* Badge */}
