@@ -93,15 +93,16 @@ const EnhancedHeroSection: React.FC<EnhancedHeroSectionProps> = ({ onSearch, onG
           ))}
         </div>
 
+        {/* Logo in left middle */}
+        <div className="absolute left-8 top-1/2 -translate-y-1/2 z-20 animate-fade-in">
+          <img 
+            src={optgradLogo} 
+            alt="OptGrad by Techoptima" 
+            className="h-12 md:h-16 w-auto hover:scale-105 transition-transform duration-300 brightness-0 invert"
+          />
+        </div>
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
-          {/* OptGrad Logo */}
-          <div className="flex justify-center mb-12 animate-fade-in">
-            <img 
-              src={optgradLogo} 
-              alt="OptGrad by Techoptima" 
-              className="h-16 md:h-20 w-auto hover:scale-105 transition-transform duration-300"
-            />
-          </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left Content */}

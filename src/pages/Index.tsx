@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import EnhancedHeroSection from "@/components/EnhancedHeroSection";
 import CategoryNavigation from "@/components/CategoryNavigation";
 import CourseCard from "@/components/CourseCard";
+import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles, Target, Award, Users, BookOpen, Star, TrendingUp, ChevronRight, Play } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
@@ -493,6 +494,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };
