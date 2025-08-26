@@ -93,20 +93,23 @@ const EnhancedHeroSection: React.FC<EnhancedHeroSectionProps> = ({ onSearch, onG
           ))}
         </div>
 
-        {/* Logo in left middle */}
-        <div className="absolute left-8 top-1/2 -translate-y-1/2 z-20 animate-fade-in">
-          <img 
-            src={optgradLogo} 
-            alt="OptGrad by Techoptima" 
-            className="h-12 md:h-16 w-auto hover:scale-105 transition-transform duration-300 brightness-0 invert"
-          />
-        </div>
-
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left Content */}
             <div className="space-y-8 animate-fade-up">
+              {/* OptGrad Logo above badge */}
+              <div className="flex justify-start -ml-4 mb-4 animate-fade-in">
+                <div className="flex items-center text-white text-3xl font-bold hover:scale-105 transition-transform duration-300">
+                  <img 
+                    src={optgradLogo} 
+                    alt="OptGrad by Techoptima" 
+                    className="h-8 w-auto mr-3 brightness-0 invert"
+                  />
+                  OptGrad
+                </div>
+              </div>
+              
               {/* Badge */}
               <div className="inline-flex items-center px-6 py-3 bg-gradient-glass backdrop-blur-md rounded-full border border-white/30 shadow-glow hover:shadow-primary transition-all duration-300 cursor-pointer group">
                 <CheckCircle className="w-5 h-5 text-accent-light mr-3 animate-pulse-glow" />
