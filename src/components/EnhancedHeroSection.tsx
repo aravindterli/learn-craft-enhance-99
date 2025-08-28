@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import heroImage from "@/assets/hero-learning.jpg";
 import optgradLogo from "@/assets/optgrad-logo.png";
 import SearchModal from "./SearchModal";
+import SignupModal from "./SignupModal";
 
 interface EnhancedHeroSectionProps {
   onSearch?: (query: string) => void;
@@ -14,6 +15,7 @@ interface EnhancedHeroSectionProps {
 const EnhancedHeroSection: React.FC<EnhancedHeroSectionProps> = ({ onSearch, onGoalSelect }) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [isSearchModalOpen, setIsSearchModalOpen] = useState(false);
+  const [isSignupModalOpen, setIsSignupModalOpen] = useState(false);
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [currentText, setCurrentText] = useState("");
@@ -113,7 +115,8 @@ const EnhancedHeroSection: React.FC<EnhancedHeroSectionProps> = ({ onSearch, onG
                 
                 {/* Signup Button on right */}
                 <Button 
-                  className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-primary animate-fade-in"
+                  onClick={() => setIsSignupModalOpen(true)}
+                  className="bg-black text-white hover:bg-black/90 px-6 py-2.5 rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg animate-fade-in"
                   style={{ animationDelay: '0.2s' }}
                 >
                   Sign Up Free
@@ -268,6 +271,11 @@ const EnhancedHeroSection: React.FC<EnhancedHeroSectionProps> = ({ onSearch, onG
         isOpen={isSearchModalOpen}
         onClose={() => setIsSearchModalOpen(false)}
         onSearch={onSearch}
+      />
+      
+      <SignupModal 
+        isOpen={isSignupModalOpen}
+        onClose={() => setIsSignupModalOpen(false)}
       />
     </>
   );
